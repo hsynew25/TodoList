@@ -1,0 +1,115 @@
+@charset "utf-8";
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+div,
+input,
+ul,
+ol,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+}
+
+.blind {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.wrap {
+}
+
+.header h1 {
+  color: pink;
+  font-size: 80px;
+  text-align: center;
+}
+
+.main {
+  border: 1px solid #d3d3d3;
+  width: 550px;
+  margin: 0 auto;
+}
+
+.toggle_label {
+  display: inline-block;
+  width: 41px;
+  text-align: center;
+}
+
+.toggle_label i {
+  color: gray;
+}
+
+.inputbox {
+  width: 500px;
+  height: 50px;
+  border: 0;
+}
+.listbox li {
+  display: flex;
+  border-top: 1px solid #d3d3d3;
+  padding: 15px 0;
+}
+
+.delbtn {
+  display: none;
+  width: 15px;
+  height: 16px;
+  margin-right: 10px;
+  background-image: url(trash-alt-regular.svg);
+  cursor: pointer;
+}
+.listbox li:hover .delbtn {
+  display: block;
+}
+
+.listbox li input {
+  width: 41px;
+}
+
+.unvisible {
+  display: none;
+}
+
+.listbox li div {
+  display: inline-block;
+  width: 500px;
+}
+
+.listinfo {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #d3d3d3;
+  padding: 15px 10px;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 10px;
+  color: gray;
+}

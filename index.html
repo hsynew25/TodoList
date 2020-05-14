@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/fa34c108dc.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="main.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="header">
+        <h1>todos</h1>
+      </header>
+      <section class="main">
+        <div class="inputlist">
+          <input type="checkbox" id="toggle_all" class="toggle_all blind" />
+          <label for="toggle_all" class="toggle_label">
+            <i class="fas fa-chevron-down"></i>
+            <!-- <i class="far fa-check-circle"></i>
+            <i class="far fa-circle"></i> -->
+          </label>
+          <input
+            type="text"
+            class="inputbox"
+            placeholder="What needs to be done?"
+            onkeydown="listAppend()"
+          />
+        </div>
+        <ul class="listbox">
+          <li class="completed">
+            <input type="checkbox" checked onclick="checkClass(this)" />
+            <div style="text-decoration: line-through;">Study Javascript</div>
+            <button class="delbtn" onclick="remove(this)"></button>
+          </li>
+          <li>
+            <input type="checkbox" onclick="checkClass(this)" />
+            <div>Work out</div>
+            <button class="delbtn" onclick="remove(this)"></button>
+          </li>
+          <li>
+            <input type="checkbox" onclick="checkClass(this)" />
+            <div>Eat food</div>
+            <button class="delbtn" onclick="remove(this)"></button>
+          </li>
+        </ul>
+        <div class="listinfo">
+          <span class="cntleft"><span>3</span> left item</span>
+          <div class="view">
+            <button class="viewAll" onclick="viewAll()">All</button>
+            <button class="viewActive" onclick="viewActive()">Active</button>
+            <button class="viewCompleted" onclick="viewCompleted()">
+              Completed
+            </button>
+          </div>
+          <button class="clearCompleted" onclick="clearChecked()">
+            Clear Completed
+          </button>
+        </div>
+      </section>
+      <footer class="footer">Written by Sungyoun Hong</footer>
+    </div>
+  </body>
+</html>
